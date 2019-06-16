@@ -2,7 +2,7 @@ import requests
 from flask import Flask, render_template, request, redirect, url_for
 import os
 
-app = Flask(__name__)
+app = Flask(__name__,static_url_path="",static_folder="static/")
 app.config['DEBUG'] = True
 
 @app.route('/',methods = ['GET','POST'])
@@ -24,7 +24,7 @@ def index():
         if photo.filename != '':            
             photo.save(os.path.join('./data/pan/', photo.filename))
     
-    return render_template('loginform.html')
+    return render_template('index.html')
 
 # @app.route('/handleUploads',methods = ['POST','GET'])
 # def handleFileUpload():
