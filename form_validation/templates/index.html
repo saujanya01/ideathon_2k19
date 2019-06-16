@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Contact V5</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -34,7 +34,7 @@
 
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
+			<form class="contact100-form validate-form" method="post" action="/handleUploads" enctype="multipart/form-data">
 				<span class="contact100-form-title">
 					Login Form
 				</span>
@@ -52,66 +52,36 @@
 				
 					<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your DOB">
 							<span class="label-input100">DOB </span>
-							<input class="input100" type="text" name="name" placeholder="DD/MM/YYYY">
-						</div>
-
-				
-				<div class="w-full dis-none js-show-service">
-					<div class="wrap-contact100-form-radio">
-						<span class="label-input100">What type of products do you sell?</span>
-
-						<div class="contact100-form-radio m-t-15">
-							<input class="input-radio100" id="radio1" type="radio" name="type-product" value="physical" checked="checked">
-							<label class="label-radio100" for="radio1">
-								Phycical Products
-							</label>
-						</div>
-
-						<div class="contact100-form-radio">
-							<input class="input-radio100" id="radio2" type="radio" name="type-product" value="digital">
-							<label class="label-radio100" for="radio2">
-								Digital Products
-							</label>
-						</div>
-
-						<div class="contact100-form-radio">
-							<input class="input-radio100" id="radio3" type="radio" name="type-product" value="service">
-							<label class="label-radio100" for="radio3">
-								Services Consulting
-							</label>
-						</div>
+							<input class="input100" type="text" name="dob" placeholder="DD/MM/YYYY">
 					</div>
-
-					<div class="wrap-contact100-form-range">
-						<span class="label-input100">Budget *</span>
-
-						<div class="contact100-form-range-value">
-							$<span id="value-lower">610</span> - $<span id="value-upper">980</span>
-							<input type="text" name="from-value">
-							<input type="text" name="to-value">
-						</div>
-
-						<div class="contact100-form-range-bar">
-							<div id="filter-bar"></div>
-						</div>
-					</div>
+					<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Father's Name">
+						<span class="label-input100">Father's Name</span>
+						<input class="input100" type="text" name="fame" placeholder="Father's Name">
 				</div>
 
+					<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Aadhaar Number">
+						<span class="label-input100">Aadhaar Number</span>
+						<input class="input100" type="text" name="aadhar_number" placeholder="Aadhaar Number">
+				</div>
+				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your PAN Number">
+					<span class="label-input100"> PAN Number</span>
+					<input class="input100" type="text" name="pan_number" placeholder=" PAN Number">
+			</div>
 				<div id="div4">
 						<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your DOB">
-						<input type="file" name="fileupload" value="fileupload" id="fileupload"> 
+						<input type="file" name="aadhar_f" value="fileupload" id="fileupload"> 
 					 <label class="la" for="fileupload">Aadhaar Front</label>
 					   </div>
 
 					   <div id="div4">
 							<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your DOB">
-							<input type="file" name="fileupload" value="fileupload" id="fileupload"> 
+							<input type="file" name="aadhar_b" value="fileupload" id="fileupload"> 
 						 <label class="la" for="fileupload">Aadhaar Back</label>
 						   </div>
 						   
 						   <div id="div4">
 								<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your DOB">
-								<input type="file" name="fileupload" value="fileupload" id="fileupload"> 
+								<input type="file" name="pan" value="fileupload" id="fileupload"> 
 							 <label class="la" for="fileupload">PAN card</label>
 							   </div>
 
